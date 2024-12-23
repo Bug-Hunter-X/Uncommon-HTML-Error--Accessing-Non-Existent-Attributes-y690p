@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv" data-custom="someValue">
+    This is some text.
+  </div>
+
+  <script>
+    const myDiv = document.getElementById("myDiv");
+    const attributeExists = myDiv.hasAttribute("data-custom");
+    let myVariable;
+    if (attributeExists) {
+      myVariable = myDiv.getAttribute("data-custom");
+    } else {
+      myVariable = "Attribute does not exist";
+    }
+    console.log(myVariable); //Outputs "someValue"
+  </script>
+</body>
+</html>
